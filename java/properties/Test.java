@@ -26,7 +26,20 @@ public class Test {
         createProperties();
         Properties settings = readProperties();
 
+        /*
+        *  output:
+            {passwd=password, username=admin}
+            admin
+            password
+            null
+            null
+        * */
         System.out.println(settings);
+        System.out.println(settings.getProperty("username"));
+        System.out.println(settings.getProperty("passwd"));
+        System.out.println(settings.getProperty("password"));
+        System.out.println(settings.getProperty("user"));
+
     }
 
     static void createProperties() {
